@@ -11,14 +11,14 @@ jobs:
     name: logic tests
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: make -C tests
 
   haiku:
     name: build on Haiku x86_64
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: version
         id: version
         run: |
@@ -36,7 +36,7 @@ jobs:
             make
             make bindcatalogs
             sh packaging/make-hpkg.sh '${{ steps.version.outputs.version }}'
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: flick-hpkg
           path: '*.hpkg'
@@ -49,7 +49,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with:
           name: flick-hpkg
       - run: gh release create "$GITHUB_REF_NAME" *.hpkg --repo "$GITHUB_REPOSITORY" --title "Flick ${GITHUB_REF_NAME#v}" --generate-notes
