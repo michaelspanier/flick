@@ -33,7 +33,6 @@ jobs:
           architecture: x86-64
           version: 'r1beta5'
           run: |
-            pkgman install -y haiku_devel makefile_engine
             make
             make bindcatalogs
             sh packaging/make-hpkg.sh '${{ steps.version.outputs.version }}'

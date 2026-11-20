@@ -24,6 +24,11 @@ LIBS = be localestub media translation $(STDCPPLIBS)
 
 LOCALES = de
 
+## BAboutWindow is public in RenkuOS, but private in Haiku R1/beta5, where
+## the CI builds. RenkuOS keeps a forwarding header at the old place.
+SYSTEM_INCLUDE_PATHS = \
+	$(shell findpaths -e B_FIND_PATH_HEADERS_DIRECTORY private/interface)
+
 OPTIMIZE := FULL
 WARNINGS = ALL
 
