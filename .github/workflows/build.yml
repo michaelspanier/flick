@@ -1,0 +1,58 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+
+jobs:
+  tests:
+    name: logic tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: make -C tests
+
+  haiku:
+    name: build on Haiku x86_64
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: version
+        id: version
+        run: |
+          if [ "${GITHUB_REF_TYPE}" = tag ]; then
+            echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+          else
+            echo "version=0.0.0~$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: cross-platform-actions/action@v1.8.0
+        with:
+          operating_system: haiku
+          architecture: x86-64
+          version: 'r1beta5'
+          run: |
+            pkgman install -y haiku_devel makefile_engine
+            make
+            make bindcatalogs
+            sh packaging/make-hpkg.sh '${{ steps.version.outputs.version }}'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: flick-hpkg
+          path: '*.hpkg'
+
+  release:
+    name: release
+    if: github.ref_type == 'tag'
+    needs: [tests, haiku]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: flick-hpkg
+      - run: gh release create "$GITHUB_REF_NAME" *.hpkg --repo "$GITHUB_REPOSITORY" --title "Flick ${GITHUB_REF_NAME#v}" --generate-notes
+        env:
+          GH_TOKEN: ${{ github.token }}

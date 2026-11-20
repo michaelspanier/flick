@@ -1,0 +1,27 @@
+name			flick
+version			@VERSION@-1
+architecture	@ARCH@
+summary			"A simple webcam app for RenkuOS"
+description		"Flick shows the live picture of a USB webcam and saves a photo \
+with one click. It switches between cameras and picture sizes while it runs, \
+has a self-timer and a mirrored picture, and gives access to the image \
+settings of the camera."
+packager		"Michael Spanier <spanier.michael@gmail.com>"
+vendor			"Michael Spanier"
+licenses {
+	"MIT"
+}
+copyrights {
+	"2026 Michael Spanier"
+}
+urls {
+	"https://github.com/michaelspanier/flick"
+}
+provides {
+	flick = @VERSION@
+	app:Flick = @VERSION@
+}
+requires {
+	haiku
+	lib:libstdc++
+}

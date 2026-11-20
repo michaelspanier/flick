@@ -1,0 +1,5 @@
+objects.*/
+locales/en.catkeys
+tests/FlickLogicTest
+tests/FlickControlsLogicTest
+tests/*.dSYM/

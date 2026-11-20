@@ -1,0 +1,60 @@
+1	german	x-vnd.Flick	873161975
+Exposure Time	FlickControls		Belichtungszeit
+WB Red	FlickControls		Rot
+Image settings…	FlickWindow		Bildeinstellungen…
+Take a photo (Space)	FlickWindow		Foto aufnehmen (Leertaste)
+Allow Lower Frame Rate	FlickControls		Niedrigere Bildrate erlauben
+Sharpness	FlickControls		Schärfe
+The photo cannot be saved	FlickWindow		Das Foto lässt sich nicht speichern
+Disconnect the camera and connect it again.	FlickWindow		Kamera abziehen und wieder anschließen.
+The camera reports no size	FlickWindow		Die Kamera meldet keine Größe
+Hue	FlickControls		Farbton
+Size	FlickWindow		Größe
+60 Hz	FlickControls		60 Hz
+Desktop not found	FlickWindow		Desktop nicht gefunden
+About Flick…	FlickWindow		Über Flick…
+Flick	System name		Flick
+Image settings	FlickControls		Bildeinstellungen
+Connect a camera and start Flick again.	FlickWindow		Eine Kamera anschließen und Flick neu starten.
+View	FlickWindow		Ansicht
+Not enough memory	FlickWindow		Zu wenig Speicher
+Camera	FlickWindow		Kamera
+Off	FlickControls		Aus
+Gain	FlickControls		Verstärkung
+Show frame rate	FlickWindow		Bildrate anzeigen
+The camera cannot be started	FlickWindow		Die Kamera lässt sich nicht starten
+PNG image	FlickWindow		PNG-Bild
+Saturation	FlickControls		Sättigung
+Take photo	FlickWindow		Foto aufnehmen
+Power Line Frequency	FlickControls		Netzfrequenz
+No camera found	FlickWindow		Keine Kamera gefunden
+This camera has no picture settings	FlickWindow		Diese Kamera hat keine Bildeinstellungen
+White Balance Component	FlickControls		Weißabgleich (Farbkanäle)
+Exposure	FlickControls		Belichtung
+Contrast	FlickControls		Kontrast
+Opening the camera…	FlickWindow		Kamera wird geöffnet…
+File	FlickWindow		Datei
+Quit	FlickWindow		Beenden
+Try another camera.	FlickWindow		Eine andere Kamera ausprobieren.
+Is another program using it?	FlickWindow		Wird sie von einem anderen Programm benutzt?
+Backlight Compensation	FlickControls		Gegenlichtausgleich
+WB Blue	FlickControls		Blau
+Brightness	FlickControls		Helligkeit
+The camera cannot be opened	FlickWindow		Die Kamera lässt sich nicht öffnen
+Looking for a camera…	FlickWindow		Kamera wird gesucht…
+50 Hz	FlickControls		50 Hz
+WB Temperature	FlickControls		Farbtemperatur
+Waiting for the picture…	FlickWindow		Warten auf das Bild…
+Flick - pictures with a click.\n\nThe photo lands on the Desktop as a PNG file, or can be dragged straight into any folder.	Flick	Flick and click rhyme on purpose. Please keep a rhyme or a pun with the name if your language allows it.	Flick – Bilder mit einem Klick.\n\nDas Foto landet als PNG auf dem Desktop oder lässt sich direkt in einen Ordner ziehen.
+Gamma	FlickControls		Gamma
+Photo saved	FlickWindow		Foto gespeichert
+Auto	FlickControls		Automatisch
+White Balance Temperature	FlickControls		Weißabgleich (Temperatur)
+Frequency	FlickControls		Frequenz
+%rate% frames/s	FlickWindow		%rate% Bilder/s
+Image settings (Alt-I)	FlickWindow		Bildeinstellungen (Alt+I)
+Mirror picture	FlickWindow		Bild spiegeln
+Mirror the picture (Alt-M)	FlickWindow		Bild spiegeln (Alt+M)
+No camera	FlickWindow		Keine Kamera
+Self-timer	FlickWindow		Selbstauslöser
+Self-timer: 3 seconds (Alt-T)	FlickWindow		Selbstauslöser: 3 Sekunden (Alt+T)
